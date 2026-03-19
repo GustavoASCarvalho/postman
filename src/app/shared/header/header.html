@@ -1,6 +1,6 @@
-<header class="h-12 w-full flex flex-row gap-4 items-center px-4 bg-white">
+<header class="h-12 w-full flex flex-row gap-4 items-center ps-4 bg-white">
   <h2 class="text-sm font-bold text-[#1E293B] border-b-2 border-transparent">Postman</h2>
-  @for (item of headerMenuItens(); track $index) {
+  <!-- @for (item of headerMenuItens(); track $index) {
     <span
       (click)="onMenuItemClick(item)"
       (keypress)="onMenuItemClick(item)"
@@ -8,5 +8,32 @@
       [class]="item.active ? 'border-[#2563EB]' : 'border-transparent'"
       >{{ item.name }}</span
     >
-  }
+  } -->
+
+  <div class="window-controls ml-auto flex items-center h-full">
+    <button
+      type="button"
+      aria-label="Minimizar"
+      class="h-full px-4 text-[#334155] hover:bg-[#E2E8F0] cursor-pointer"
+      (click)="minimizeWindow()"
+    >
+      <i class="ph-bold ph-minus"></i>
+    </button>
+    <button
+      type="button"
+      aria-label="Maximizar"
+      class="h-full px-4 text-[#334155] hover:bg-[#E2E8F0] cursor-pointer"
+      (click)="toggleMaximizeWindow()"
+    >
+      <i class="ph-bold ph-square"></i>
+    </button>
+    <button
+      type="button"
+      aria-label="Fechar"
+      class="h-full px-4 text-[#334155] hover:bg-[#EF4444] hover:text-white cursor-pointer"
+      (click)="closeWindow()"
+    >
+      <i class="ph-bold ph-x"></i>
+    </button>
+  </div>
 </header>

@@ -13,13 +13,13 @@ interface SidebarMenuItem {
   styleUrl: './sidebar.css',
 })
 export class Sidebar {
-  protected readonly sidebarMenuItens = signal<SidebarMenuItem[]>([
-    { name: 'Collection', icon: 'folder', active: false },
-    { name: 'History', icon: 'history', active: false },
+  protected readonly sidebarMainMenuItens = signal<SidebarMenuItem[]>([
+    { name: 'Collection', icon: 'folder', active: true },
+    { name: 'History', icon: 'clock-counter-clockwise', active: false },
   ]);
 
   protected toggleActive(item: SidebarMenuItem): void {
-    this.sidebarMenuItens.update((items) =>
+    this.sidebarMainMenuItens.update((items) =>
       items.map((i) => ({
         ...i,
         active: i.name === item.name ? !i.active : false,

@@ -1,3 +1,8 @@
 header {
   -webkit-app-region: drag;
 }
+
+.window-controls,
+.window-controls * {
+  -webkit-app-region: no-drag;
+}
