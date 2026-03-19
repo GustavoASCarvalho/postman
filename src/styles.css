@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #005fb8;
+
+  --color-primary-100: #d6e3ff;
+  --color-primary-200: #a8c8ff;
+  --color-primary-300: #78acff;
+  --color-primary-400: #5191ed;
+  --color-primary-500: #3177d1;
+  --color-primary-600: #005db5;
+  --color-primary-700: #00468b;
+  --color-primary-800: #003062;
+  --color-primary-900: #001b3d;
+
+  --color-secondary: #75777d;
+  --color-tertiary: #757491;
+  --color-neutral: #64748b;
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+}

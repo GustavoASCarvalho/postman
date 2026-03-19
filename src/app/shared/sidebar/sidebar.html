@@ -1,0 +1,23 @@
+<aside class="h-full bg-[#F8FAFC]">
+  <div class="flex flex-col gap-1 px-6 py-4 min-w-65">
+    <h1 class="font-bold text-lg text-[#0F172A]">Postman</h1>
+    <span class="text-xs text-[#64748B]">Workspace 01</span>
+  </div>
+  <ul class="flex flex-col gap-1 px-3">
+    @for (item of sidebarMenuItens(); track $index) {
+      <div
+        (click)="toggleActive(item)"
+        (keypress)="toggleActive(item)"
+        class="flex items-center gap-3 px-4 py-2 text-sm cursor-pointer hover:bg-[#E2E8F0] border-l-4"
+        [class]="
+          item.active
+            ? 'bg-[#EFF6FF] text-[#1D4ED8] font-semibold border-l-[#1D4ED8]'
+            : 'bg-transparent text-[#0F172A] font-medium border-l-transparent'
+        "
+      >
+        <!-- <i class="icon">{{ item.icon }}</i> -->
+        <span>{{ item.name }}</span>
+      </div>
+    }
+  </ul>
+</aside>

@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "tauri": "cd src-tauri && cargo tauri dev"
   },
   "prettier": {
     "printWidth": 100,
@@ -28,7 +29,10 @@
     "@angular/forms": "^20.2.0",
     "@angular/platform-browser": "^20.2.0",
     "@angular/router": "^20.2.0",
+    "@tailwindcss/postcss": "^4.2.2",
+    "postcss": "^8.5.8",
     "rxjs": "~7.8.0",
+    "tailwindcss": "^4.2.2",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },

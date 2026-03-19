@@ -1,0 +1,12 @@
+<header class="h-12 w-full flex flex-row gap-4 items-center px-4 bg-white">
+  <h2 class="text-sm font-bold text-[#1E293B] border-b-2 border-transparent">Postman</h2>
+  @for (item of headerMenuItens(); track $index) {
+    <span
+      (click)="onMenuItemClick(item)"
+      (keypress)="onMenuItemClick(item)"
+      class="h-full flex items-center text-sm cursor-pointer text-[#2563EB] border-b-2"
+      [class]="item.active ? 'border-[#2563EB]' : 'border-transparent'"
+      >{{ item.name }}</span
+    >
+  }
+</header>
